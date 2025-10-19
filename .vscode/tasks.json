@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project with Boost",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "\"${workspaceFolder}/main/*.cpp\"",
+                "-I", "C:/msys64/ucrt64/include",
+                "-L", "C:/msys64/ucrt64/lib",
+                "-lboost_serialization-mt",
+                "-o", "\"${workspaceFolder}/main.exe\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
