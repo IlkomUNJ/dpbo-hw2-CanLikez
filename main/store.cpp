@@ -457,7 +457,7 @@ void Store::listMostActiveSellers() const {
 // serializaiton
 void Store::saveData() {
     try {
-        std::ofstream ofs("data/store_data.boost");
+        ofstream ofs("data/store_data.boost");
         if (ofs) {
             boost::archive::text_oarchive oa(ofs);
             oa << buyers;
@@ -472,7 +472,7 @@ void Store::saveData() {
 
 void Store::loadData() {
     try {
-        std::ifstream ifs("data/store_data.boost");
+        ifstream ifs("data/store_data.boost");
         if (ifs) {
             boost::archive::text_iarchive ia(ifs);
             ia >> buyers;

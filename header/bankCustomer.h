@@ -31,7 +31,7 @@ private:
     vector<BankTransaction> transactionHistory;
 
 public:
-    BankCustomer() : ownerId(""), accountId(""), balance(0.0) {}
+    BankCustomer() : accountId(""), ownerId(""), balance(0.0) {}
     BankCustomer(const string& ownerId, double initialBalance = 0.0);
     BankCustomer(const string& accountId, const string& ownerId, double balance);
 
